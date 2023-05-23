@@ -40,10 +40,17 @@ export default function App() {
   };
 
   return (
-    <section>
-      Grocery Bud Starter
-      <Form addItem={addItem} />
-      <Items items={items} removeItem={removeItem} editItem={editItem} />
+    <section className="w-[80%] justify-center text-center my-5 mx-auto md:my-14 m-auto">
+      <h2 className="text-center text-[2rem] mb-5 text-black font-normal">
+        <span className="text-blue-400">T</span>o
+        <span className="text-blue-400">D</span>o{" "}
+        <span className="text-blue-400">L</span>ist{" "}
+        <span className="text-blue-400">A</span>pp
+      </h2>
+      <div className="bg-[#ffffff] overflow-x-auto p-1 sm:p-5 hover:shadow-xl transition-all max-w-[550px] mx-auto rounded-md justify-center  shadow-md">
+        <Form addItem={addItem} />
+        <Items items={items} removeItem={removeItem} editItem={editItem} />
+      </div>
     </section>
   );
 }
